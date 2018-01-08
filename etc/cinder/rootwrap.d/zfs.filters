@@ -1,0 +1,6 @@
+[Filters]
+# cinder/volume/drivers/zfs.py
+zfs: CommandFilter, zfs, root
+zpool: CommandFilter, zpool, root
+zfs-migrate: CommandFilter, zfs-migrate, root
+

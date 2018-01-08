@@ -1,0 +1,15 @@
+#!/bin/sh
+if [ "$#" -ne 2 ]; then
+  echo "Usage:"
+  echo "  $0 zpool/zvol zpool/zvol"
+  exit 1
+fi
+echo migration $1 to $2
+
+snap="migrate"
+
+zfs snapshot $1@$snap
+zfs send $1@$snap | zfs recv $2
+zfs destroy $1@$snap
+zfs destroy $2@$snap
+
