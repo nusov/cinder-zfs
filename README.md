@@ -12,7 +12,6 @@ enabled_backends=zfs
 [zfs]
 volume_backend_name=zfs
 volume_driver=cinder.volume.drivers.zfs.ZFSVolumeDriver
-iscsi_ip_address=10.0.2.15
 iscsi_helper=lioadm
 zfs_zpool=cinder-zfs
 zfs_type=thin
