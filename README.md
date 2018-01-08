@@ -19,4 +19,5 @@ iscsi_helper=lioadm
 zfs_zpool=cinder-zfs
 zfs_type=thin
 ```
-
+# Known issues
+* Migrations between multiple cinder backends are not triggered on Pike
