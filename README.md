@@ -1,4 +1,4 @@
-# nfvexpress-zfs
+# cinder-zfs
 ZFS driver for Cinder. Currently works with ZoL (ZFS on Linux)
 
 # ZFS installation on CentOS/RHEL
