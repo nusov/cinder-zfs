@@ -22,7 +22,7 @@ $ sudo cp cinder-zfs/cinder/volume/drivers/zfs.py /usr/lib/python3/dist-packages
 
 # Pool creation
 ```
-$ zpool create cinder-zfs /dev/sdb
+# zpool create cinder-zfs /dev/sdb
 ```
 
 # Cinder configuration
