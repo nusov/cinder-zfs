@@ -7,6 +7,7 @@ ZFS driver for Cinder. Currently works with ZoL (ZFS on Linux).
 
 # Features
 * Thin provisioning
+* Migration between different zpools
 * Snapshots
 
 # Driver installation
