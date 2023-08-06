@@ -1,4 +1,6 @@
 #!/bin/sh
+set -ex
+
 if [ "$#" -ne 2 ]; then
   echo "Usage:"
   echo "  $0 zpool/zvol zpool/zvol"
@@ -12,4 +14,3 @@ zfs snapshot $1@$snap
 zfs send $1@$snap | zfs recv $2
 zfs destroy $1@$snap
 zfs destroy $2@$snap
-
