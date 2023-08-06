@@ -1,5 +1,5 @@
 # cinder-zfs
-ZFS driver for Cinder. Currently works with ZoL (ZFS on Linux).
+ZoL (ZFS on Linux) driver for Cinder.
 
 # ZFS on Linux installation
 * [https://openzfs.github.io/openzfs-docs](https://openzfs.github.io/openzfs-docs)
