@@ -20,7 +20,9 @@ $ sudo cp cinder-zfs/cinder/volume/drivers/zfs.py /usr/lib/python3/dist-packages
 ```
 
 # Pool creation
-zpool create cinder-zfs /dev/sdb 
+```
+$ zpool create cinder-zfs /dev/sdb
+```
 
 # Cinder configuration
 ```
@@ -35,3 +37,36 @@ zfs_zpool=cinder-zfs
 zfs_type=thin
 ```
 
+# Usage
+```
+$ openstack volume create --size 1 cirros-boot --image cirros
++---------------------+--------------------------------------+
+| Field               | Value                                |
++---------------------+--------------------------------------+
+| attachments         | []                                   |
+| availability_zone   | nova                                 |
+| bootable            | false                                |
+| consistencygroup_id | None                                 |
+| created_at          | 2023-08-06T18:08:44.655261           |
+| description         | None                                 |
+| encrypted           | False                                |
+| id                  | 4aa9bd98-dde4-40a5-b934-11aaa9aed056 |
+| migration_status    | None                                 |
+| multiattach         | False                                |
+| name                | cirros-boot                          |
+| properties          |                                      |
+| replication_status  | None                                 |
+| size                | 1                                    |
+| snapshot_id         | None                                 |
+| source_volid        | None                                 |
+| status              | creating                             |
+| type                | __DEFAULT__                          |
+| updated_at          | None                                 |
+| user_id             | a843b8e999b64c41a9a771672c473e33     |
++---------------------+--------------------------------------+
+
+$ zfs list
+NAME                                                     USED  AVAIL     REFER  MOUNTPOINT
+cinder-zfs                                              44.9M  61.5G       96K  /cinder-zfs
+cinder-zfs/volume-4aa9bd98-dde4-40a5-b934-11aaa9aed056  44.3M  61.5G     44.3M  -
+```
