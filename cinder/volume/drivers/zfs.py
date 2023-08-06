@@ -39,7 +39,7 @@ from cinder import interface
 from cinder import objects
 from cinder import utils
 from cinder.volume import driver
-from cinder.volume import utils as volutils
+from cinder.volume import volume_utils as volutils
 
 LOG = logging.getLogger(__name__)
 
@@ -81,7 +81,7 @@ class ZFSVolumeDriver(driver.VolumeDriver):
         # the driver (control path), this way
         # different target drivers can be added (iscsi, FC etc)
         target_driver = \
-            self.target_mapping[self.configuration.safe_get('iscsi_helper')]
+            self.target_mapping[self.configuration.safe_get('target_helper')]
 
         LOG.debug('Attempting to initialize ZFS driver with the '
                   'following target_driver: %s',
