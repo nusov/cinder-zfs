@@ -9,6 +9,7 @@ ZoL (ZFS on Linux) driver for Cinder.
 * Thin provisioning
 * Migration between different zpools
 * Snapshots
+* Python2/3 compatible
 
 # Driver installation
 
