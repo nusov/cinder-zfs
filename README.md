@@ -35,7 +35,7 @@ enabled_backends=zfs
 [zfs]
 volume_backend_name=zfs
 volume_driver=cinder.volume.drivers.zfs.ZFSVolumeDriver
-iscsi_helper=tgtadm
+target_helper=lioadm
 zfs_zpool=cinder-zfs
 zfs_type=thin
 ```
