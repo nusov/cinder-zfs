@@ -2,5 +2,7 @@
 # cinder/volume/drivers/zfs.py
 zfs: CommandFilter, zfs, root
 zpool: CommandFilter, zpool, root
+
+# TODO(nusov) move zfs-migrate commands to zfs.py
 zfs-migrate: CommandFilter, zfs-migrate, root
 
